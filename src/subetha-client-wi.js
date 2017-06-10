@@ -133,6 +133,7 @@ Use this plugin observe changes in all windows in the network.
     // FUNCTIONS
 
     function openMonitor(url) {
+      console.log('openMonitor');
       // use last if url is invalid
       if (!url || typeof url != 'string') {
         url = winAry.url;
@@ -157,6 +158,7 @@ Use this plugin observe changes in all windows in the network.
     }
 
     function startMonitor() {
+      console.log('startMonitor');
 
       // exit if already monitoring
       if (monitoring) {
@@ -605,6 +607,7 @@ Use this plugin observe changes in all windows in the network.
       }
       */
       subetha.msgType['subetha/winfo'] = function (client, peer, payload) {
+        console.log('WINFO MESSAGE', payload)
         var
           deets,
           winfo,

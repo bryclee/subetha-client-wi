@@ -5,6 +5,7 @@
   body {
     background: gray;
     font-family: sans-serif;
+    overflow: hidden;
   }
 
   .notice {
@@ -82,7 +83,9 @@
   }
 </style>
   <script src="http://rawgit.com/bemson/subetha/master/subetha.min.js"></script>
-  <script src="http://rawgit.com/bemson/subetha-client-wi/master/subetha-client-wi.min.js"></script>
+  <script src="http://rawgit.com/bemson/subetha-client-wi/subetha-client-wi.min.js"></script>
+  <script src="./src/ball-model.js"></script>
+  <script src="./src/ball-ui.js"></script>
   <script>
 var
   availTop = screen.availTop || 0,
@@ -152,8 +155,7 @@ winfos
       wind = windoidTpl.cloneNode(true);
 
     if (!inited) {
-      inited = 1;
-      document.body.appendChild($screen);
+        document.body.appendChild($screen);
     }
 
     wind.setAttribute('data-wid', id);
