@@ -116,7 +116,7 @@
             console.log('windowJoin');
         });
 
-    ballClient.open('ball');
+    ballClient.open('ball@public');
 
     setTimeout(function() {
         ballClient.emit('requestForBall');
